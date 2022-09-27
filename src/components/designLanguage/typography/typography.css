@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import '../variables/variables.css';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+.type {
+    padding: 5rem 0;
+    margin: 0 5vw;
+}
+
+.header-one {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--hah-accent);
+}
+.header-two {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--hah-dark);
+}
+.header-three {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--hah-mid);
+}
