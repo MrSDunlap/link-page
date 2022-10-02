@@ -1,7 +1,9 @@
 import React, { Children } from 'react';
+import { useState } from 'react';
 import './stephenHome.css';
 import '../../../main-content/navigation/nav.css';
 import { FaEdit } from 'react-icons/fa'
+import Hamburger from 'hamburger-react';
 
 function menuClick() {
   let menu = document.getElementsByClassName('nav-container');
@@ -9,6 +11,11 @@ function menuClick() {
   menu.classList.toggle('slide-in');
 }
 const stephenHome = () => {
+
+  //const [topBar,setTop] = useState('bar-one');
+  //const [midBar,setMid] = useState('bar-two');
+  //const [lowBar,setLow] = useState('bar-three');
+
 
   let rotation = ()=> {
     
@@ -28,9 +35,18 @@ const stephenHome = () => {
       <div className="stephen">
         <span className="bg-gradient"></span>
         <div className='nav-burger' onClick={menuClick}>
-          <span className="bar bar-one"></span>
+          {/*<span className="bar bar-one"></span>
           <span className="bar bar-two"></span>
-          <span className="bar bar-three"></span>
+          <span className="bar bar-three"></span>*/}
+          <Hamburger onToggle={toggled => {
+            if (toggled) {
+              // open a menu
+              let menu = document.getElementsByClassName('nav-container');
+              menu.classList.toggle('slide-in');
+            } else {
+              // close a menu
+            }
+          }}/>
         </div>
         <div className="headshot-container">
           <div className="image">
